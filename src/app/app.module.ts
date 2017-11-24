@@ -1,17 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, NavController } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-
+//import { HomePage } from '../pages/home/home';
+import { MainPage } from '../pages/main/main';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    MainPage
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    MainPage
   ],
   providers: [
     StatusBar,

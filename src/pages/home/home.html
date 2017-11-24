@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Oficina Abierta GPS</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let post of posts" style='line-height:60%;'>
+      <img [src]="post.FOTO" width="15%" style="float:left;margin-right:5px;"/> <span style='font-size:60%;font-weight:bold;color:#e2001A;'> {{post.NOMBRE}} {{post.APELLIDOS}}</span>
+<br/><br/><span style='white-space:normal;font-size:60%;font-weight:italic;'> {{post.CARGO}} </span>
+    </ion-item>
+  </ion-list>
 </ion-content>
