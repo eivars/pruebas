@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>GPS Asamblea Regional</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style='background-color:#850317;font-size:100%;padding:3px;font-weight:bold;color:#FFFFFF;'>AA</div>
+  <ion-list>
+    <button ion-item *ngFor="let post of posts" style='font-size:70%;'>
+      <span style='font-weight:bold;color:#e2001A;'> {{post.REFERENCIA}}</span>
+      <span style='font-weight:italic;white-space:normal;'> {{post.APELLIDOS}} </span>
+      <br/><span style='color:#036146;font-weight:italic;'> {{post.NOMBRE}} </span>
+    </button>
+  </ion-list>
+</ion-content>

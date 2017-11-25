@@ -5,10 +5,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let post of posts" style='line-height:60%;'>
-      <img [src]="post.FOTO" width="15%" style="float:left;margin-right:5px;"/> <span style='font-size:60%;font-weight:bold;color:#e2001A;'> {{post.NOMBRE}} {{post.APELLIDOS}}</span>
+  <ion-list no-lines>
+    <button (click)="goToDiputado(post.REFERENCIA)" ion-item *ngFor="let post of posts" style='line-height:60%;' (click)="itemSelected(post.REFERENCIA)">
+      <ion-avatar item-start>
+<img [src]="post.FOTO" style="float:left;margin-right:5px;"/> </ion-avatar><span style='font-size:60%;font-weight:bold;color:#e2001A;'> {{post.NOMBRE}} {{post.APELLIDOS}}</span>
 <br/><br/><span style='white-space:normal;font-size:60%;font-weight:italic;'> {{post.CARGO}} </span>
-    </ion-item>
+</button>
   </ion-list>
 </ion-content>
